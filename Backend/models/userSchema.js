@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+import mongoose from 'mongoose';
+import bcrypt from 'bcrypt';
 import validator from 'validator';
 import jwt from 'jsonwebtoken';
 
 // Define the user schema
 const userSchema = new mongoose.Schema({
-    username: {
+    name: {
         type: String,
         required: [true,"Please Provide a name"],
         minLength:[3,"must contain 3 characters"],
@@ -72,7 +72,6 @@ userSchema.methods.geJWTToken =  function() {
     }
 };
 
-
 const User = mongoose.model('User', userSchema);
 
-module.exports = User;
+export default User; 

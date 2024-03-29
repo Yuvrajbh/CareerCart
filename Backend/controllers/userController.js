@@ -1,6 +1,6 @@
 import { catchAsyncError } from "../middlewares/catchAsyncError.js";
-import { ErrorHandler } from "../middlewares/error.js"
-import { User } from "../models/userSchema.js"
+import  ErrorHandler  from "../middlewares/error.js"
+import User  from "../models/userSchema.js"
 
 
 
@@ -19,13 +19,10 @@ export const register = catchAsyncError(async (req, res, next) => {
     const user = await User.create({
         name, email, phone, password, role
     });
-    res.status(200).json({
-        success:true,
-        message:"user registered successfully",
-        user
-    })
-
-
-
-
+    // res.status(200).json({
+    //     success:true,
+    //     message:"user registered successfully",
+    //     user
+    // })
+    
 })
