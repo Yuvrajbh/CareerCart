@@ -1,7 +1,6 @@
 import React from 'react'
-import "./App.css"
 
-const App = () => {
+const Jobs = () => {
   return (
     <div>
       
@@ -9,4 +8,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Jobs
