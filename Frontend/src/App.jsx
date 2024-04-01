@@ -15,6 +15,7 @@ import MyApplications from './components/Application/MyApplications'
 import Application from './components/Application/Application'
 import Footer from './components/Layout/Footer'
 import Navbar from './components/Layout/Navbar'
+import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
 
@@ -45,6 +46,7 @@ const App = () => {
         <Route path='/application/me' element={<MyApplications></MyApplications>} />
         <Route path='/application/:id' element={<Application></Application>} />
         <Route path='/application/me' element={<MyApplications></MyApplications>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <Toaster />
