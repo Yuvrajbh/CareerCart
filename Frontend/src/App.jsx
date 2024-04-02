@@ -19,7 +19,7 @@ import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
 
-  const { isAuthorized, setIsAuthorized, user, setUser } = useContext(Context)
+  const { isAuthorized,setIsAuthorized,user,setUser } = useContext(Context)
   useEffect(() => {
     const fetchUser = async () => {
       try {
